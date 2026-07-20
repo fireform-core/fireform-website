@@ -243,6 +243,15 @@ body {
     z-index: 1;
 }
 
+.btn-to-page {
+	display: inline-flex; 
+	width: auto; 
+	padding: 12px 24px; 
+	justify-content: center; 
+	text-decoration: none;
+	color:  var(--text-secondary);
+}
+
 .os-name {
     color: var(--text-primary);
     font-weight: 600;
