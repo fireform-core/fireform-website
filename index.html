@@ -1,176 +1,889 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FireForm - Report Once, File Everywhere</title>
-    <meta name="description" content="FireForm is an open-source, AI-powered system designed to help first responders eliminate redundant paperwork. Download the desktop app now.">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireForm — AI-Powered Incident Reporting for First Responders</title>
+  <meta name="description"
+    content="FireForm is a UN-recognized Digital Public Good. Report once, file everywhere. Eliminate redundant paperwork with 100% offline, on-device AI for first responders.">
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-    <div class="background-effects">
-        <div class="glow red-glow"></div>
-        <div class="glow orange-glow"></div>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <!-- Logo and Brand -->
+        <a href="index.html" class="brand-link" id="brand-home-link">
+          <div class="brand-icon-box">
+            <img src="assets/logo.svg" alt="FireForm Logo" width="30" height="30">
+          </div>
+          <span>FireForm</span>
+          <span class="brand-tag">UN DPG</span>
+        </a>
+
+        <!-- Center Nav Items -->
+        <ul class="nav-menu">
+          <li><a href="#features" class="nav-link">Features</a></li>
+          <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+          <li><a href="#agencies" class="nav-link">Agencies</a></li>
+          <li><a href="dpg.html" class="nav-link">DPG & SDGs <span class="badge-new">UN</span></a></li>
+          <li><a href="#download" class="nav-link">Downloads</a></li>
+        </ul>
+
+        <!-- Right Action CTAs -->
+        <div class="header-actions">
+          <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
+            class="btn btn-outline btn-sm">
+            <span>GitHub</span>
+          </a>
+          <a href="#download" class="btn btn-primary btn-sm">
+            <span>Download v1.0.0</span>
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle navigation menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Orbital Background (Deflexai Style) -->
+  <section class="hero-section">
+    <!-- Orbital Rings Background -->
+    <div class="hero-orbits">
+      <div class="orbit-ring orbit-1"></div>
+      <div class="orbit-ring orbit-2"></div>
+      <div class="orbit-ring orbit-3"></div>
     </div>
 
-    <nav class="navbar">
-        <div class="container">
-            <div class="logo">
-                <span class="fire-icon">🔥</span> FireForm
-            </div>
-            <div class="nav-links">
-                <a href="dpg.html" class="github-link" style="margin-right: 15px;">
-                    DPG & SDGs
-                </a>
-                <a href="terms.html" class="github-link" style="margin-right: 15px;">Terms</a>
-                <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer" class="github-link">
-                    GitHub
-                </a>
-            </div>
+    <!-- Floating Orbital Badges stationed on orbits -->
+    <div class="hero-nodes">
+      <div class="orbit-node node-calfire">
+        <span class="node-icon" style="background:#fee2e2;">🔥</span>
+        <span>CalFire Form 101</span>
+      </div>
+      <div class="orbit-node node-nfirs">
+        <span class="node-icon" style="background:#e0f2fe;">📋</span>
+        <span>NFIRS 5.0 National</span>
+      </div>
+      <div class="orbit-node node-ems">
+        <span class="node-icon" style="background:#dcfce7;">🚑</span>
+        <span>County EMS Handover</span>
+      </div>
+      <div class="orbit-node node-sheriff">
+        <span class="node-icon" style="background:#fef3c7;">⭐</span>
+        <span>Sheriff Incident Report</span>
+      </div>
+      <div class="orbit-node node-mistral">
+        <span class="node-icon" style="background:#ffedd5;">🤖</span>
+        <span>Local Mistral 7B</span>
+      </div>
+      <div class="orbit-node node-offline">
+        <span class="node-icon" style="background:#f1f5f9;">🔒</span>
+        <span>100% Offline Vault</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <!-- Award Pill / Social Proof Rating -->
+        <div class="hero-award-badge">
+          <div class="badge-stars">★ 4.9 First Responders</div>
+          <div class="badge-divider"></div>
+          <div class="badge-text">🏆 1st Place Reboot the Earth · UN Digital Public Good</div>
         </div>
-    </nav>
 
-    <main class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="badge">Reboot the Earth Hackathon Winner</div>
-                <h1 class="hero-title">Report Once, <br><span class="gradient-text">File Everywhere.</span></h1>
-                <p class="hero-subtitle">
-                    An open-source, AI-powered system built to solve administrative overhead for first responders. Save hundreds of hours by eliminating redundant paperwork.
-                </p>
-                
-                <div class="download-section">
-                    <h2 class="download-heading">Download FireForm v1.0.0</h2>
-                    <div class="button-group">
-                        <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.dmg" class="btn btn-primary" aria-label="Download for macOS">
-                            <span class="os-icon">🍎</span>
-                            <div class="btn-text">
-                                <span class="os-name">macOS</span>
-                                <span class="file-type">.dmg Installer</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.exe" class="btn btn-primary" aria-label="Download for Windows">
-                            <span class="os-icon">🪟</span>
-                            <div class="btn-text">
-                                <span class="os-name">Windows</span>
-                                <span class="file-type">.exe Installer</span>
-                            </div>
-                        </a>
-                        
-                        <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.AppImage" class="btn btn-primary" aria-label="Download for Linux">
-                            <span class="os-icon">🐧</span>
-                            <div class="btn-text">
-                                <span class="os-name">Linux</span>
-                                <span class="file-type">.AppImage</span>
-                            </div>
-                        </a>
-                    </div>
-                    <a href="https://github.com/fireform-core/FireForm/releases" class="view-all-link" target="_blank" rel="noopener noreferrer">View all releases and notes →</a>
-                </div>
-            </div>
-            
-            <section class="about-section" style="margin-top: 60px; margin-bottom: 60px;">
-                <h2 class="section-heading">Digital Public Good</h2>
-                <div class="about-card" style="text-align: center; display: flex; flex-direction: column; align-items: center; padding: 40px;">
-                    <div class="about-content" style="margin-bottom: 20px;">
-                        <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.9);">FireForm is proudly recognized as a <strong>Digital Public Good (DPG)</strong>. We are committed to advancing the United Nations' Sustainable Development Goals (SDGs).</p>
-                    </div>
-                    <a href="dpg.html" class="btn btn-to-page">Learn about our SDG Relevance →</a>
-                </div>
-            </section>
+        <!-- Main Headline -->
+        <h1 class="hero-title">
+          AI-powered incident reporting to <br>
+          <span class="highlight-text">eliminate redundant paperwork</span>
+        </h1>
 
-            <div class="features-section">
-                <h2 class="section-heading">Current Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">📝</div>
-                        <h3>Smart PDF Conversion</h3>
-                        <p>Automatically turn any non-fillable PDF into a fillable, standardized template.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">💾</div>
-                        <h3>Local Template Database</h3>
-                        <p>Store your templates in a local DB. Recover past templates and quickly generate new forms.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🎙️</div>
-                        <h3>Voice or Text Input</h3>
-                        <p>Provide input via text or voice transcription. A single input drives everything.</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🤖</div>
-                        <h3>Automated LLM Filling</h3>
-                        <p>Our local LLM extracts relevant information and automatically populates the documents.</p>
-                    </div>
-                </div>
-            </div>
+        <!-- Subtitle -->
+        <p class="hero-subtitle">
+          Record a 60-second voice memo or master note once. On-device local AI automatically extracts structured data
+          and populates every agency PDF form—100% offline, zero cloud leaks.
+        </p>
 
-            <div class="features-section future-roadmap">
-                <h2 class="section-heading">Future Roadmap</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="feature-icon">🌍</div>
-                            <h3>External Data APIs</h3>
-                            <p>Connect to APIs to automatically fetch climate, location, and other external data.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="feature-icon">📊</div>
-                            <h3>Insightful Dashboard</h3>
-                            <p>Visualize your reports with comprehensive graphics and statistics.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="feature-icon">🧠</div>
-                            <h3>ML Field Detection</h3>
-                            <p>Machine learning models for advanced, automatic form field detection.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="timeline-content">
-                            <div class="feature-icon">📑</div>
-                            <h3>Advanced PDF Features</h3>
-                            <p>More powerful PDF manipulation, merging, and management tools.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <section class="about-section">
-                <h2 class="section-heading">About the Project</h2>
-                <div class="about-card">
-                    <div class="about-content">
-                        <p>FireForm was born at a Silicon Valley hackathon organized by the <strong>United Nations</strong>, <strong>University of California</strong>, and <strong>CalFire</strong>.</p>
-                        <p>After winning first place, the project was awarded a 6-month mentorship by <strong>Salesforce</strong>. We are also proud to be part of <strong>Google Summer of Code</strong>, welcoming new collaborators to scale our impact.</p>
-                    </div>
-                    <div class="contact-links">
-                        <h3>Interested in collaborating?</h3>
-                        <div class="social-badges">
-                            <a href="mailto:contact@fireform.example.com" class="badge-link">📧 Email Us</a>
-                            <a href="https://github.com/fireform-core/FireForm" class="badge-link" target="_blank">💻 GitHub</a>
-                            <a href="#" class="badge-link" target="_blank">🔗 LinkedIn</a>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        <!-- CTA Buttons -->
+        <div class="hero-actions">
+          <a href="#download" class="btn btn-primary btn-lg">
+            <span>Download FireForm Free</span>
+          </a>
+          <a href="dpg.html" class="btn btn-secondary btn-lg">
+            <span>Explore UN SDG Impact →</span>
+          </a>
         </div>
-    </main>
 
-    <footer>
-        <div class="container">
-            <p>FireForm is a Digital Public Good. Licensed under MIT. &nbsp;·&nbsp; <a href="privacy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Privacy Policy</a> &nbsp;·&nbsp; <a href="terms.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Terms of Service</a></p>
+        <!-- Centerpiece Floating Interactive Glass Card -->
+        <div class="hero-interactive-card">
+          <div class="hero-card-avatar">🔥</div>
+          <div class="hero-card-body">
+            <div class="hero-card-header">
+              <div class="hero-card-name">Capt. Sarah Chen · Incident #2024-884</div>
+              <div class="hero-card-time">Filed 2 mins ago</div>
+            </div>
+            <div class="hero-card-desc">
+              Structure Fire · Engine 14 · Voice Memo parsed into 4 agency forms
+            </div>
+            <div class="hero-card-tags">
+              <span class="hero-card-tag status-success">✓ NFIRS 5.0 (100%)</span>
+              <span class="hero-card-tag status-success">✓ CalFire 101 (100%)</span>
+              <span class="hero-card-tag status-success">✓ County EMS (100%)</span>
+              <span class="hero-card-tag">🔒 On-Device Offline</span>
+            </div>
+          </div>
         </div>
-    </footer>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Logo Cloud / Recognition Strip -->
+  <section class="logo-cloud-section">
+    <div class="container">
+      <div class="logo-cloud-label">Recognized & Supported By Leading Global Organizations</div>
+      <div class="logo-cloud-grid">
+        <div class="logo-item" title="United Nations">
+          <img src="assets/un.svg" alt="United Nations">
+        </div>
+        <div class="logo-item" title="Cal Fire">
+          <img src="assets/calfire.svg" alt="CAL FIRE">
+        </div>
+        <div class="logo-item" title="Salesforce">
+          <img src="assets/salesforce.svg" alt="Salesforce">
+        </div>
+        <div class="logo-item" title="Google Summer of Code">
+          <img src="assets/gsoc.svg" alt="Google Summer of Code">
+        </div>
+        <div class="logo-item" title="UC Santa Cruz">
+          <img src="assets/ucsc.svg" alt="UC Santa Cruz">
+        </div>
+        <div class="logo-item" title="Digital Public Goods Alliance">
+          <img src="assets/dpg.svg" alt="Digital Public Goods">
+        </div>
+        <div class="logo-item" title="Mistral AI">
+          <img src="assets/mistral.svg" alt="Mistral AI">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4-Grid Section ("Simplify task management for modern teams" style) -->
+  <section class="grid-features-section" id="features">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Core Architecture</span>
+        <h2 class="section-title">Simplify incident management for modern teams</h2>
+        <p class="section-subtitle">
+          Break down chaotic field operations into clean, verified records. Keep your department moving forward without
+          the clerical burden.
+        </p>
+      </div>
+
+      <div class="four-grid">
+        <div class="four-grid-item">
+          <div class="grid-item-icon icon-blue">🛡️</div>
+          <div class="grid-item-metric">Zero cloud dependency</div>
+          <p class="grid-item-desc">
+            100% on-device local LLM execution guarantees sensitive incident notes, victim identities, and medical data
+            never touch external cloud servers.
+          </p>
+        </div>
+
+        <div class="four-grid-item">
+          <div class="grid-item-icon icon-green">⏱️</div>
+          <div class="grid-item-metric">5+ hours saved per shift</div>
+          <p class="grid-item-desc">
+            Automate routine NFIRS and agency paperwork at the end of each call so firefighters can rest, recover, and
+            prepare for the next dispatch.
+          </p>
+        </div>
+
+        <div class="four-grid-item">
+          <div class="grid-item-icon icon-purple">🔄</div>
+          <div class="grid-item-metric">Report once, file everywhere</div>
+          <p class="grid-item-desc">
+            One master field recording or memo simultaneously populates County Sheriff, State Fire Marshal, and EMS
+            incident packages with zero duplicate typing.
+          </p>
+        </div>
+
+        <div class="four-grid-item">
+          <div class="grid-item-icon icon-orange">📄</div>
+          <div class="grid-item-metric">Smart PDF field detection</div>
+          <p class="grid-item-desc">
+            Turn flat, non-fillable legacy PDF templates into interactive, intelligent digital forms ready for automated
+            data mapping.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Showcase 1: Interactive Workspace Showcase -->
+  <section class="interactive-workspace-section" id="how-it-works">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Interactive Workflow</span>
+        <h2 class="section-title">Your all-in-one incident reporting workspace</h2>
+        <p class="section-subtitle">
+          Experience how FireForm transforms raw field audio into audit-ready multi-agency records in seconds.
+        </p>
+      </div>
+
+      <!-- Filter Nav Pills -->
+      <div class="filter-pills-nav">
+        <button class="filter-pill active" data-tab="tab-voice">
+          <span>🎙️ Voice Memo & Audio</span>
+        </button>
+        <button class="filter-pill" data-tab="tab-extract">
+          <span>🤖 Local LLM Extraction</span>
+        </button>
+        <button class="filter-pill" data-tab="tab-forms">
+          <span>📑 Multi-Agency Autofill</span>
+        </button>
+        <button class="filter-pill" data-tab="tab-storage">
+          <span>🔒 Offline Encrypted DB</span>
+        </button>
+      </div>
+
+      <div class="workspace-display-grid">
+        <!-- Left Explanation Column -->
+        <div class="workspace-left-info">
+          <span class="workspace-tag">Step-by-step intelligence</span>
+          <h3 class="workspace-title" id="workspace-title">Dictate in real-time or drop field voice recordings</h3>
+          <p class="workspace-desc" id="workspace-desc">
+            First responders speak naturally about the incident. FireForm transcribes scene audio with zero cloud
+            latency, preserving every detail while responders focus on safety.
+          </p>
+          <ul class="workspace-bullets">
+            <li class="workspace-bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Works without cell reception or station Wi-Fi</span>
+            </li>
+            <li class="workspace-bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>High-accuracy transcription tailored to emergency acronyms</span>
+            </li>
+            <li class="workspace-bullet-item">
+              <span class="bullet-check">✓</span>
+              <span>Preserves original audio timestamped to the incident log</span>
+            </li>
+          </ul>
+          <a href="#download" class="btn btn-primary">
+            <span>Try Desktop App Free</span>
+          </a>
+        </div>
+
+        <!-- Right Simulated Window Preview -->
+        <div class="workspace-preview-card">
+          <div class="preview-card-header">
+            <div class="window-dots">
+              <div class="window-dot dot-red"></div>
+              <div class="window-dot dot-yellow"></div>
+              <div class="window-dot dot-green"></div>
+            </div>
+            <div class="window-title">FireForm Studio — Incident #2024-884</div>
+            <div style="font-size: 0.72rem; color: #10b981; font-weight: 600;">● Engine 14 Online</div>
+          </div>
+
+          <div class="preview-card-content">
+            <!-- Tab 1: Voice Dictation -->
+            <div class="tab-content-panel active" id="tab-voice">
+              <div class="waveform-box">
+                <div class="waveform-header">
+                  <span class="recording-badge">
+                    <span class="recording-pulse"></span>
+                    Capt. Sarah Chen · Radio Memo
+                  </span>
+                  <span style="font-size: 0.75rem; font-family: var(--font-mono); color: #94a3b8;">01:14 / 01:45</span>
+                </div>
+                <div class="waveform-bars">
+                  <span class="wave-bar" style="height: 12px;"></span>
+                  <span class="wave-bar" style="height: 24px;"></span>
+                  <span class="wave-bar" style="height: 18px;"></span>
+                  <span class="wave-bar" style="height: 30px;"></span>
+                  <span class="wave-bar" style="height: 15px;"></span>
+                  <span class="wave-bar" style="height: 28px;"></span>
+                  <span class="wave-bar" style="height: 22px;"></span>
+                  <span class="wave-bar" style="height: 10px;"></span>
+                  <span class="wave-bar" style="height: 25px;"></span>
+                  <span class="wave-bar" style="height: 32px;"></span>
+                  <span class="wave-bar" style="height: 14px;"></span>
+                  <span class="wave-bar" style="height: 20px;"></span>
+                </div>
+                <div class="transcript-snippet">
+                  "Engine 14 arrived on scene at 14:22 at 742 Evergreen Terrace. Confirmed single-family two-story
+                  structure fire with heavy smoke from rear bedroom. Two 1.75 inch attack lines deployed. Hydrant
+                  established at corner of Elm. Search completed with primary all-clear. Fire under control at 14:58. No
+                  civilian or firefighter injuries."
+                </div>
+              </div>
+              <div style="display: flex; gap: 8px; justify-content: flex-end;">
+                <span style="font-size: 0.75rem; color: #64748b;">Confidence: <strong>99.4%</strong></span>
+              </div>
+            </div>
+
+            <!-- Tab 2: LLM Extraction -->
+            <div class="tab-content-panel" id="tab-extract">
+              <div class="extracted-fields-list">
+                <div class="field-row">
+                  <span class="field-key">Incident Type</span>
+                  <span class="field-val">111 - Building Fire</span>
+                  <span class="field-badge">NFIRS Valid</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-key">Location Address</span>
+                  <span class="field-val">742 Evergreen Terrace</span>
+                  <span class="field-badge">Geocoded</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-key">Apparatus Dispatched</span>
+                  <span class="field-val">Engine 14 (Primary Attack)</span>
+                  <span class="field-badge">Unit Matched</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-key">Arrival Time / Controlled</span>
+                  <span class="field-val">14:22 / 14:58 PST</span>
+                  <span class="field-badge">Timestamped</span>
+                </div>
+                <div class="field-row">
+                  <span class="field-key">Casualties / Injuries</span>
+                  <span class="field-val">0 Civilian / 0 Firefighter</span>
+                  <span class="field-badge">Verified</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tab 3: Multi-Agency Autofill -->
+            <div class="tab-content-panel" id="tab-forms">
+              <div class="agency-form-item">
+                <div class="form-item-left">
+                  <div class="form-doc-icon">📑</div>
+                  <div>
+                    <div class="form-item-name">NFIRS-1 Basic Form</div>
+                    <div class="form-item-sub">USFA Federal Incident Database</div>
+                  </div>
+                </div>
+                <span class="hero-card-tag status-success">Ready to Export (100%)</span>
+              </div>
+              <div class="agency-form-item">
+                <div class="form-item-left">
+                  <div class="form-doc-icon">🌲</div>
+                  <div>
+                    <div class="form-item-name">CalFire FC-33 Incident Summary</div>
+                    <div class="form-item-sub">California Dept of Forestry & Fire</div>
+                  </div>
+                </div>
+                <span class="hero-card-tag status-success">Ready to Export (100%)</span>
+              </div>
+              <div class="agency-form-item">
+                <div class="form-item-left">
+                  <div class="form-doc-icon">🚑</div>
+                  <div>
+                    <div class="form-item-name">County EMS PCR Medical Log</div>
+                    <div class="form-item-sub">Mutual Aid Emergency Transport</div>
+                  </div>
+                </div>
+                <span class="hero-card-tag status-success">Ready to Export (100%)</span>
+              </div>
+            </div>
+
+            <!-- Tab 4: Offline Encrypted DB -->
+            <div class="tab-content-panel" id="tab-storage">
+              <div
+                style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px; text-align: left;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px;">
+                  <span style="font-size: 0.82rem; font-weight: 700; color: #0f172a;">Local SQLite Vault
+                    (offline.db)</span>
+                  <span
+                    style="font-size: 0.72rem; padding: 2px 8px; border-radius: 9999px; background: #ecfdf5; color: #059669; font-weight: 600;">AES-256
+                    Encrypted</span>
+                </div>
+                <div style="font-family: var(--font-mono); font-size: 0.75rem; color: #475569; line-height: 1.8;">
+                  <div>[DB_STATUS] &nbsp;Local storage active</div>
+                  <div>[OUTBOUND] &nbsp;&nbsp;0 cloud network requests</div>
+                  <div>[INTEGRITY] &nbsp;SHA-256 signature verified</div>
+                  <div>[RECORDS] &nbsp;&nbsp;&nbsp;342 incidents indexed locally</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3-Column Bento Grid ("Plan projects and track tasks effortlessly" style) -->
+  <section class="bento-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Core Features</span>
+        <h2 class="section-title">Plan incident logs and track filings effortlessly</h2>
+        <p class="section-subtitle">
+          Modern administrative tools crafted to keep responders organized without the headaches of rigid government
+          software.
+        </p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Card 1: Smart PDF Conversion -->
+        <div class="bento-card">
+          <div class="bento-card-visual">
+            <div class="mini-pdf-box">
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <span class="mini-badge-highlight">Non-Fillable PDF</span>
+                <span style="font-size: 0.72rem; color: #10b981; font-weight: 700;">→ Auto-Detected</span>
+              </div>
+              <div class="mini-skeleton-line" style="width: 70%;"></div>
+              <div class="mini-skeleton-line" style="width: 100%;"></div>
+              <div class="mini-skeleton-line" style="width: 85%;"></div>
+              <div
+                style="background: #ecfdf5; border: 1px dashed #059669; padding: 6px; border-radius: 6px; font-size: 0.7rem; color: #065f46; font-weight: 600;">
+                ✓ 24 Form Fields Converted to Schema
+              </div>
+            </div>
+          </div>
+          <h3 class="bento-card-title">Smart PDF Conversion</h3>
+          <p class="bento-card-desc">
+            Instantly turn flat, scanned or non-fillable legacy PDFs into standard editable templates with automated
+            field boundary recognition.
+          </p>
+        </div>
+
+        <!-- Card 2: Local AI Engine -->
+        <div class="bento-card">
+          <div class="bento-card-visual">
+            <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;">
+              <div
+                style="width: 48px; height: 48px; border-radius: 12px; background: #fff7ed; border: 1px solid #ffedd5; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                🤖
+              </div>
+              <span style="font-size: 0.78rem; font-weight: 700; color: #0f172a;">Mistral 7B via Ollama</span>
+              <span style="font-size: 0.7rem; color: #64748b; font-family: var(--font-mono);">0.0ms Cloud Latency · $0
+                Token Cost</span>
+            </div>
+          </div>
+          <h3 class="bento-card-title">Local Privacy Engine</h3>
+          <p class="bento-card-desc">
+            Run open-source LLMs directly on your apparatus laptop. Process incident narratives without Wi-Fi, keeping
+            data secure and HIPAA-compliant.
+          </p>
+        </div>
+
+        <!-- Card 3: Multi-Agency Export -->
+        <div class="bento-card">
+          <div class="bento-card-visual">
+            <div style="display: flex; flex-direction: column; gap: 6px; width: 100%;">
+              <div
+                style="display: flex; align-items: center; justify-content: space-between; font-size: 0.72rem; font-weight: 600; color: #475569;">
+                <span>Exporting Agency Package</span>
+                <span style="color: #059669;">100%</span>
+              </div>
+              <div style="height: 6px; background: #e2e8f0; border-radius: 9999px; overflow: hidden;">
+                <div style="width: 100%; height: 100%; background: #10b981;"></div>
+              </div>
+              <span style="font-size: 0.68rem; color: #64748b; margin-top: 4px;">✓ CalFire Wildfire Log &nbsp;·&nbsp; ✓
+                County Sheriff Incident</span>
+            </div>
+          </div>
+          <h3 class="bento-card-title">One-Click Multi-Agency Export</h3>
+          <p class="bento-card-desc">
+            Bundle and digitally sign official PDFs across Sheriff, Fire, and Medical dispatch in a single click with
+            pre-validated data integrity.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Integration Showcase ("Organize work and boost team productivity" style) -->
+  <section class="integration-stack-section" id="agencies">
+    <div class="container">
+      <div class="integration-grid">
+        <!-- Left Column -->
+        <div class="integration-content-left">
+          <span class="section-pill">Interoperability</span>
+          <h2 class="section-title">Seamless compliance across every regional agency</h2>
+          <p class="section-subtitle">
+            From municipal fire stations to county sheriffs and state emergency operations, FireForm bridges fragmented
+            filing requirements.
+          </p>
+          <div style="display: flex; gap: 12px; margin-top: 24px;">
+            <a href="#download" class="btn btn-primary">Get Started Free</a>
+            <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
+              class="btn btn-secondary">View Source Code</a>
+          </div>
+
+          <div class="social-proof-counter">
+            <div class="avatar-stack">
+              <div class="avatar-stack-item">🚒</div>
+              <div class="avatar-stack-item">⭐</div>
+              <div class="avatar-stack-item">🚑</div>
+            </div>
+            <div class="proof-text">
+              Trusted by first responders across California.<br>
+              <strong>Over 1,200+ hours saved</strong> in field simulations.
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column Agency Cards Stack -->
+        <div class="integration-cards-list">
+          <div class="agency-card">
+            <div class="agency-card-left">
+              <div class="agency-card-icon" style="color: #dc2626;">🔥</div>
+              <div>
+                <div class="agency-card-title">CAL FIRE & State Marshals</div>
+                <div class="agency-card-sub">Wildfire perimeter, mutual aid logs, and apparatus dispatches</div>
+              </div>
+            </div>
+            <span class="agency-badge-pill">Template Verified</span>
+          </div>
+
+          <div class="agency-card">
+            <div class="agency-card-left">
+              <div class="agency-card-icon" style="color: #0284c7;">📋</div>
+              <div>
+                <div class="agency-card-title">NFIRS 5.0 Federal Database</div>
+                <div class="agency-card-sub">Standard USFA incident classification codes and casualties</div>
+              </div>
+            </div>
+            <span class="agency-badge-pill">Standardized</span>
+          </div>
+
+          <div class="agency-card">
+            <div class="agency-card-left">
+              <div class="agency-card-icon" style="color: #b45309;">⭐</div>
+              <div>
+                <div class="agency-card-title">County Sheriff & Local Police</div>
+                <div class="agency-card-sub">Perimeter evacuation logs and cross-jurisdictional handover</div>
+              </div>
+            </div>
+            <span class="agency-badge-pill">Cross-Filing</span>
+          </div>
+
+          <div class="agency-card">
+            <div class="agency-card-left">
+              <div class="agency-card-icon" style="color: #059669;">🚑</div>
+              <div>
+                <div class="agency-card-title">EMS & Hospital Handover</div>
+                <div class="agency-card-sub">Patient care records without cloud data exposure</div>
+              </div>
+            </div>
+            <span class="agency-badge-pill">HIPAA Ready</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- High-Fidelity Desktop App Preview Mockup Window ("Smart task management") -->
+  <section class="desktop-mockup-section">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Desktop Experience</span>
+        <h2 class="section-title">Smart incident management for modern departments</h2>
+        <p class="section-subtitle">
+          Designed specifically for fast-paced shift work. Clean, distraction-free, and hyper-responsive.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 12px; margin-top: 20px;">
+          <a href="#download" class="btn btn-primary">Download FireForm</a>
+          <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
+            class="btn btn-secondary">Star on GitHub ⭐</a>
+        </div>
+      </div>
+
+      <!-- App Window Mockup -->
+      <div class="mockup-window">
+        <!-- Window Chrome -->
+        <div class="window-chrome">
+          <div class="window-dots">
+            <div class="window-dot dot-red"></div>
+            <div class="window-dot dot-yellow"></div>
+            <div class="window-dot dot-green"></div>
+          </div>
+          <div class="window-search-bar">
+            <span>🔍</span>
+            <span>Search incident logs, templates, or audio files...</span>
+          </div>
+          <div style="display: flex; gap: 8px;">
+            <span class="brand-tag">v1.0.0</span>
+          </div>
+        </div>
+
+        <!-- Inner App Split View -->
+        <div class="mockup-inner-app">
+          <!-- Sidebar -->
+          <div class="app-sidebar">
+            <div class="sidebar-category">Operations</div>
+            <a href="#" class="sidebar-link active">
+              <span>📋</span>
+              <span>Active Incidents</span>
+            </a>
+            <a href="#" class="sidebar-link">
+              <span>🎙️</span>
+              <span>Voice Transcriber</span>
+            </a>
+            <a href="#" class="sidebar-link">
+              <span>📑</span>
+              <span>Template Studio</span>
+            </a>
+
+            <div class="sidebar-category">Filings</div>
+            <a href="#" class="sidebar-link">
+              <span>📤</span>
+              <span>Agency Exports</span>
+            </a>
+            <a href="#" class="sidebar-link">
+              <span>💾</span>
+              <span>Local Database</span>
+            </a>
+            <a href="#" class="sidebar-link">
+              <span>⚙️</span>
+              <span>Settings</span>
+            </a>
+          </div>
+
+          <!-- Main Viewport -->
+          <div class="app-main-viewport">
+            <div class="viewport-head">
+              <div>
+                <div class="viewport-title">Station 14 — Incident Command Dashboard</div>
+                <div style="font-size: 0.78rem; color: #64748b;">Shift B · Batt. Chief Ramirez · All local models loaded
+                </div>
+              </div>
+              <button class="btn btn-primary btn-sm">+ New Incident Memo</button>
+            </div>
+
+            <!-- Kanban/Pipeline Columns -->
+            <div class="kanban-cards-row">
+              <div class="kanban-column">
+                <div class="column-title">
+                  <span>Voice Input (1)</span>
+                  <span style="font-weight: 800;">●</span>
+                </div>
+                <div class="kanban-card">
+                  <div class="kanban-card-title">Inc #2024-887 · Brush Fire</div>
+                  <div style="font-size: 0.74rem; color: #475569;">E14, Water Tender 2 · Highway 9 Mile 14</div>
+                  <div class="kanban-card-meta">
+                    <span style="color: #ea580c; font-weight: 600;">Transcribing...</span>
+                    <span>1m ago</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kanban-column">
+                <div class="column-title">
+                  <span>In Progress Extraction (1)</span>
+                  <span style="font-weight: 800;">●</span>
+                </div>
+                <div class="kanban-card">
+                  <div class="kanban-card-title">Inc #2024-885 · MVC Vehicle Extrication</div>
+                  <div style="font-size: 0.74rem; color: #475569;">E14, Medic 8 · Ocean St / Water St</div>
+                  <div class="kanban-card-meta">
+                    <span style="color: #2563eb; font-weight: 600;">Mapping fields</span>
+                    <span>14m ago</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="kanban-column">
+                <div class="column-title">
+                  <span>Completed & Filed (2)</span>
+                  <span style="font-weight: 800;">●</span>
+                </div>
+                <div class="kanban-card">
+                  <div class="kanban-card-title">Inc #2024-884 · Structure Fire</div>
+                  <div style="font-size: 0.74rem; color: #475569;">742 Evergreen Terr · 4 agency PDFs exported</div>
+                  <div class="kanban-card-meta">
+                    <span style="color: #059669; font-weight: 600;">✓ Filed & Signed</span>
+                    <span>32m ago</span>
+                  </div>
+                </div>
+                <div class="kanban-card">
+                  <div class="kanban-card-title">Inc #2024-881 · Commercial Alarm</div>
+                  <div style="font-size: 0.74rem; color: #475569;">Pacific Ave Mall · False alarm confirmed</div>
+                  <div class="kanban-card-meta">
+                    <span style="color: #059669; font-weight: 600;">✓ Filed & Signed</span>
+                    <span>2h ago</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download FireForm Section -->
+  <section class="download-section-modern" id="download">
+    <div class="container">
+      <div class="section-head">
+        <span class="section-pill">Official Release</span>
+        <h2 class="section-title">Download FireForm for your platform</h2>
+        <p class="section-subtitle">
+          Free and open-source. Runs locally on Apple Silicon, Intel, Windows, and Linux. No subscription or cloud
+          account required.
+        </p>
+      </div>
+
+      <div class="download-cards-grid">
+        <!-- macOS -->
+        <div class="download-platform-card">
+          <div class="platform-icon-circle">🍎</div>
+          <div class="platform-name">macOS</div>
+          <div class="platform-specs">Universal DMG (Apple Silicon M-Series & Intel)</div>
+          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.dmg"
+            class="btn btn-primary">
+            Download .dmg
+          </a>
+        </div>
+
+        <!-- Windows -->
+        <div class="download-platform-card">
+          <div class="platform-icon-circle">🪟</div>
+          <div class="platform-name">Windows</div>
+          <div class="platform-specs">Windows 10 / 11 64-bit Installer</div>
+          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.exe"
+            class="btn btn-primary">
+            Download .exe
+          </a>
+        </div>
+
+        <!-- Linux -->
+        <div class="download-platform-card">
+          <div class="platform-icon-circle">🐧</div>
+          <div class="platform-name">Linux</div>
+          <div class="platform-specs">Universal .AppImage & Debian Package</div>
+          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.AppImage"
+            class="btn btn-primary">
+            Download .AppImage
+          </a>
+        </div>
+      </div>
+
+      <div class="release-notes-banner">
+        Latest release: <strong>FireForm v1.0.0</strong> &nbsp;·&nbsp;
+        <a href="https://github.com/fireform-core/FireForm/releases" target="_blank" rel="noopener noreferrer">View
+          Changelog & Checksums →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Digital Public Good & Hackathon Section -->
+  <section class="dpg-banner-section">
+    <div class="container">
+      <div class="dpg-callout-box">
+        <div class="dpg-callout-text">
+          <h3>Recognized United Nations Digital Public Good</h3>
+          <p>
+            FireForm was born at a Silicon Valley hackathon organized by the <strong>United Nations</strong>, the
+            <strong>University of California</strong>, and <strong>CalFire</strong>. After winning 1st place in Reboot
+            the Earth, FireForm received mentorship from <strong>Salesforce</strong> and is an active participant in
+            <strong>Google Summer of Code</strong>.
+          </p>
+        </div>
+        <div>
+          <a href="dpg.html" class="btn btn-secondary btn-lg" style="white-space: nowrap;">
+            Learn About UN SDGs →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Clean Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top-grid">
+        <!-- Brand Info -->
+        <div class="footer-brand-info">
+          <a href="index.html" class="brand-link">
+            <div class="brand-icon-box">
+              <img src="assets/logo.svg" alt="FireForm Logo" width="28" height="28">
+            </div>
+            <span>FireForm</span>
+          </a>
+          <p class="footer-desc">
+            An open-source, UN-recognized Digital Public Good built to eliminate administrative overhead for first
+            responders worldwide.
+          </p>
+          <div style="font-size: 0.78rem; color: #94a3b8;">
+            Licensed under the MIT Open Source License.
+          </div>
+        </div>
+
+        <!-- Product -->
+        <div>
+          <div class="footer-col-title">Product</div>
+          <ul class="footer-nav-list">
+            <li><a href="#features" class="footer-nav-link">Core Features</a></li>
+            <li><a href="#how-it-works" class="footer-nav-link">Voice Dictation</a></li>
+            <li><a href="#agencies" class="footer-nav-link">Agency Autofill</a></li>
+            <li><a href="#download" class="footer-nav-link">Desktop App Releases</a></li>
+          </ul>
+        </div>
+
+        <!-- Impact & Standards -->
+        <div>
+          <div class="footer-col-title">Impact</div>
+          <ul class="footer-nav-list">
+            <li><a href="dpg.html" class="footer-nav-link">Digital Public Good</a></li>
+            <li><a href="dpg.html#sdg16" class="footer-nav-link">SDG 16: Strong Institutions</a></li>
+            <li><a href="dpg.html#sdg11" class="footer-nav-link">SDG 11: Sustainable Cities</a></li>
+            <li><a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
+                class="footer-nav-link">Reboot the Earth</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources & Legal -->
+        <div>
+          <div class="footer-col-title">Legal & Open Source</div>
+          <ul class="footer-nav-list">
+            <li><a href="privacy.html" class="footer-nav-link">Privacy Policy</a></li>
+            <li><a href="terms.html" class="footer-nav-link">Terms of Service</a></li>
+            <li><a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
+                class="footer-nav-link">GitHub Repository</a></li>
+            <li><a href="https://github.com/fireform-core/FireForm/blob/main/CONTRIBUTING.md" target="_blank"
+                rel="noopener noreferrer" class="footer-nav-link">Contributing</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <div>
+          © 2026 FireForm Core. A recognized Digital Public Good.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="privacy.html" class="footer-nav-link">Privacy</a>
+          <a href="terms.html" class="footer-nav-link">Terms</a>
+          <a href="dpg.html" class="footer-nav-link">DPG Standards</a>
+          <a href="https://github.com/fireform-core/FireForm" class="footer-nav-link" target="_blank"
+            rel="noopener noreferrer">GitHub</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
+
 </html>

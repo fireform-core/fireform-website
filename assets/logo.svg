@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <defs>
+    <linearGradient id="fireGrad" x1="16" y1="2" x2="16" y2="30" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF6B35" />
+      <stop offset="50%" stop-color="#F95738" />
+      <stop offset="100%" stop-color="#E63946" />
+    </linearGradient>
+    <linearGradient id="innerFire" x1="16" y1="12" x2="16" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FFDD57" />
+      <stop offset="100%" stop-color="#FF8E3C" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="#0F172A"/>
+  <path d="M16 4C16 4 19.5 8.5 19.5 12C19.5 13.2 19 14.2 18.2 15C19.5 14.8 22 16.5 22 19.5C22 23.5 19.3 27 16 27C12.7 27 10 23.5 10 19.5C10 15 13.5 11 14.5 9.5C14.5 9.5 14 11.5 14.5 13C15 11 16 4 16 4Z" fill="url(#fireGrad)"/>
+  <path d="M16 16C16 16 17.8 18.2 17.8 20C17.8 21.5 17 23 16 23C15 23 14.2 21.5 14.2 20C14.2 18.2 16 16 16 16Z" fill="url(#innerFire)"/>
+</svg>
