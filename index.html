@@ -8,6 +8,7 @@
   <meta name="description"
     content="FireForm is a UN-recognized Digital Public Good. Report once, file everywhere. Eliminate redundant paperwork with 100% offline, on-device AI for first responders.">
   <link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+  <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +48,7 @@
             <span>GitHub</span>
           </a>
           <a href="#download" class="btn btn-primary btn-sm">
-            <span>Download v1.0.0</span>
+            <span>Download v1.1.1</span>
           </a>
           <button class="mobile-toggle" aria-label="Toggle navigation menu">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -61,90 +62,171 @@
     </div>
   </header>
 
-  <!-- Hero Section with Orbital Background (Deflexai Style) -->
-  <section class="hero-section">
-    <!-- Orbital Rings Background -->
-    <div class="hero-orbits">
-      <div class="orbit-ring orbit-1"></div>
-      <div class="orbit-ring orbit-2"></div>
-      <div class="orbit-ring orbit-3"></div>
-    </div>
-
-    <!-- Floating Orbital Badges stationed on orbits -->
-    <div class="hero-nodes">
-      <div class="orbit-node node-calfire">
-        <span class="node-icon" style="background:#fee2e2;">🔥</span>
-        <span>CalFire Form 101</span>
-      </div>
-      <div class="orbit-node node-nfirs">
-        <span class="node-icon" style="background:#e0f2fe;">📋</span>
-        <span>NFIRS 5.0 National</span>
-      </div>
-      <div class="orbit-node node-ems">
-        <span class="node-icon" style="background:#dcfce7;">🚑</span>
-        <span>County EMS Handover</span>
-      </div>
-      <div class="orbit-node node-sheriff">
-        <span class="node-icon" style="background:#fef3c7;">⭐</span>
-        <span>Sheriff Incident Report</span>
-      </div>
-      <div class="orbit-node node-mistral">
-        <span class="node-icon" style="background:#ffedd5;">🤖</span>
-        <span>Local Mistral 7B</span>
-      </div>
-      <div class="orbit-node node-offline">
-        <span class="node-icon" style="background:#f1f5f9;">🔒</span>
-        <span>100% Offline Vault</span>
-      </div>
-    </div>
-
+  <!-- Hero Section — Split layout: headline left, PDF preview right -->
+  <section class="hero-section hero-split">
     <div class="container">
-      <div class="hero-content">
-        <!-- Award Pill / Social Proof Rating -->
-        <div class="hero-award-badge">
-          <div class="badge-stars">★ 4.9 First Responders</div>
-          <div class="badge-divider"></div>
-          <div class="badge-text">🏆 1st Place Reboot the Earth · UN Digital Public Good</div>
+      <div class="hero-split-grid">
+
+        <!-- Left: Headline + copy + CTAs + stats -->
+        <div class="hero-split-left">
+          <div class="hero-award-badge">
+            <div class="badge-stars">★ 4.9 · First Responders</div>
+            <div class="badge-divider"></div>
+            <div class="badge-text">1st Place Reboot the Earth · UN Digital Public Good</div>
+          </div>
+
+          <h1 class="hero-title">
+            AI incident reporting.<br>
+            <span class="highlight-text">The paperwork files itself.</span>
+          </h1>
+
+          <p class="hero-subtitle">
+            Speak or type a single incident memo. FireForm's on-device AI reads every field, extracts structured data, and fills every agency PDF form — 100% offline, zero cloud exposure.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary btn-lg">
+              <span>Download Free</span>
+            </a>
+            <a href="dpg.html" class="btn btn-secondary btn-lg">
+              <span>Explore UN SDG Impact →</span>
+            </a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="hero-stat">
+              <span class="hero-stat-num">5+ hrs</span>
+              <span class="hero-stat-label">saved per shift</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">100%</span>
+              <span class="hero-stat-label">offline & private</span>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div class="hero-stat">
+              <span class="hero-stat-num">1 memo</span>
+              <span class="hero-stat-label">fills all agency forms</span>
+            </div>
+          </div>
         </div>
 
-        <!-- Main Headline -->
-        <h1 class="hero-title">
-          AI-powered incident reporting to <br>
-          <span class="highlight-text">eliminate redundant paperwork</span>
-        </h1>
-
-        <!-- Subtitle -->
-        <p class="hero-subtitle">
-          Record a 60-second voice memo or master note once. On-device local AI automatically extracts structured data
-          and populates every agency PDF form—100% offline, zero cloud leaks.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="hero-actions">
-          <a href="#download" class="btn btn-primary btn-lg">
-            <span>Download FireForm Free</span>
-          </a>
-          <a href="dpg.html" class="btn btn-secondary btn-lg">
-            <span>Explore UN SDG Impact →</span>
-          </a>
-        </div>
-
-        <!-- Centerpiece Floating Interactive Glass Card -->
-        <div class="hero-interactive-card">
-          <div class="hero-card-avatar">🔥</div>
-          <div class="hero-card-body">
-            <div class="hero-card-header">
-              <div class="hero-card-name">Capt. Sarah Chen · Incident #2024-884</div>
-              <div class="hero-card-time">Filed 2 mins ago</div>
+        <!-- Right: Realistic PDF form preview (like Instafill.ai) -->
+        <div class="hero-split-right">
+          <div class="pdf-preview-wrapper">
+            <div class="pdf-preview-label">
+              NFIRS-1 Incident Report &nbsp;·&nbsp; Filled by FireForm in 8 sec
+              <span class="pdf-label-status">Auto-filled</span>
             </div>
-            <div class="hero-card-desc">
-              Structure Fire · Engine 14 · Voice Memo parsed into 4 agency forms
-            </div>
-            <div class="hero-card-tags">
-              <span class="hero-card-tag status-success">✓ NFIRS 5.0 (100%)</span>
-              <span class="hero-card-tag status-success">✓ CalFire 101 (100%)</span>
-              <span class="hero-card-tag status-success">✓ County EMS (100%)</span>
-              <span class="hero-card-tag">🔒 On-Device Offline</span>
+            <div class="pdf-preview-doc">
+              <!-- Simulated realistic NFIRS form header -->
+              <div class="pdf-form-header">
+                <div class="pdf-form-title">NFIRS-1 BASIC MODULE — NATIONAL FIRE INCIDENT REPORTING SYSTEM</div>
+                <div class="pdf-form-agency">U.S. Fire Administration / Federal Emergency Management Agency</div>
+              </div>
+
+              <div class="pdf-form-body">
+                <!-- Row 1 -->
+                <div class="pdf-row">
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">INCIDENT DATE</div>
+                    <div class="pdf-field-value filled">11/14/2024</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">STATE INCIDENT NO.</div>
+                    <div class="pdf-field-value filled">CA-2024-884</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">FDID</div>
+                    <div class="pdf-field-value filled">39-15014</div>
+                  </div>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="pdf-row">
+                  <div class="pdf-field pdf-field-wide">
+                    <div class="pdf-field-label">LOCATION OF INCIDENT</div>
+                    <div class="pdf-field-value filled">742 Evergreen Terrace, Santa Cruz, CA 95062</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">INCIDENT TYPE</div>
+                    <div class="pdf-field-value filled">111 — Building Fire</div>
+                  </div>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="pdf-row">
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">ALARM TIME</div>
+                    <div class="pdf-field-value filled">14:18 PST</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">ARRIVAL TIME</div>
+                    <div class="pdf-field-value filled">14:22 PST</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">CONTROLLED TIME</div>
+                    <div class="pdf-field-value filled">14:58 PST</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">CLEARED TIME</div>
+                    <div class="pdf-field-value filled">15:34 PST</div>
+                  </div>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="pdf-row">
+                  <div class="pdf-field pdf-field-wide">
+                    <div class="pdf-field-label">APPARATUS / RESOURCES DEPLOYED</div>
+                    <div class="pdf-field-value filled">Engine 14 (Primary Attack), Water Tender 2, Medic 8</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">PERSONNEL</div>
+                    <div class="pdf-field-value filled">6</div>
+                  </div>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="pdf-row">
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">CIVILIAN CASUALTIES</div>
+                    <div class="pdf-field-value filled">0</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">FF INJURIES</div>
+                    <div class="pdf-field-value filled">0</div>
+                  </div>
+                  <div class="pdf-field pdf-field-wide">
+                    <div class="pdf-field-label">PROPERTY USE</div>
+                    <div class="pdf-field-value filled">419 — 1 or 2 Family Dwelling</div>
+                  </div>
+                </div>
+
+                <!-- Row 6: Narrative -->
+                <div class="pdf-row">
+                  <div class="pdf-field pdf-field-full">
+                    <div class="pdf-field-label">INCIDENT NARRATIVE</div>
+                    <div class="pdf-field-value filled pdf-narrative">Engine 14 arrived on scene at 14:22 at 742 Evergreen Terrace. Confirmed single-family two-story structure fire with heavy smoke from rear bedroom. Two 1.75" attack lines deployed. Hydrant established at corner of Elm. Search completed — primary all-clear. Fire under control at 14:58. No civilian or firefighter injuries reported.</div>
+                  </div>
+                </div>
+
+                <!-- Signature row -->
+                <div class="pdf-row pdf-row-signature">
+                  <div class="pdf-field pdf-field-wide">
+                    <div class="pdf-field-label">OFFICER IN CHARGE</div>
+                    <div class="pdf-field-value filled">Capt. Sarah Chen · Station 14</div>
+                  </div>
+                  <div class="pdf-field">
+                    <div class="pdf-field-label">BADGE / ID</div>
+                    <div class="pdf-field-value filled">FF-4421</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bottom overlay badge -->
+              <div class="pdf-filled-badge">
+                All 24 fields auto-filled · 100% accuracy · On-device AI
+              </div>
             </div>
           </div>
         </div>
@@ -249,16 +331,16 @@
       <!-- Filter Nav Pills -->
       <div class="filter-pills-nav">
         <button class="filter-pill active" data-tab="tab-voice">
-          <span>🎙️ Voice Memo & Audio</span>
+          <span>Voice Memo &amp; Audio</span>
         </button>
         <button class="filter-pill" data-tab="tab-extract">
-          <span>🤖 Local LLM Extraction</span>
+          <span>Local LLM Extraction</span>
         </button>
         <button class="filter-pill" data-tab="tab-forms">
-          <span>📑 Multi-Agency Autofill</span>
+          <span>Multi-Agency Autofill</span>
         </button>
         <button class="filter-pill" data-tab="tab-storage">
-          <span>🔒 Offline Encrypted DB</span>
+          <span>Offline Encrypted DB</span>
         </button>
       </div>
 
@@ -623,7 +705,7 @@
             <span>Search incident logs, templates, or audio files...</span>
           </div>
           <div style="display: flex; gap: 8px;">
-            <span class="brand-tag">v1.0.0</span>
+            <span class="brand-tag">v1.1.1</span>
           </div>
         </div>
 
@@ -633,29 +715,23 @@
           <div class="app-sidebar">
             <div class="sidebar-category">Operations</div>
             <a href="#" class="sidebar-link active">
-              <span>📋</span>
               <span>Active Incidents</span>
             </a>
             <a href="#" class="sidebar-link">
-              <span>🎙️</span>
               <span>Voice Transcriber</span>
             </a>
             <a href="#" class="sidebar-link">
-              <span>📑</span>
               <span>Template Studio</span>
             </a>
 
             <div class="sidebar-category">Filings</div>
             <a href="#" class="sidebar-link">
-              <span>📤</span>
               <span>Agency Exports</span>
             </a>
             <a href="#" class="sidebar-link">
-              <span>💾</span>
               <span>Local Database</span>
             </a>
             <a href="#" class="sidebar-link">
-              <span>⚙️</span>
               <span>Settings</span>
             </a>
           </div>
@@ -751,7 +827,7 @@
           <div class="platform-icon-circle">🍎</div>
           <div class="platform-name">macOS</div>
           <div class="platform-specs">Universal DMG (Apple Silicon M-Series & Intel)</div>
-          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.dmg"
+          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-1.1.1-arm64.dmg"
             class="btn btn-primary">
             Download .dmg
           </a>
@@ -762,7 +838,7 @@
           <div class="platform-icon-circle">🪟</div>
           <div class="platform-name">Windows</div>
           <div class="platform-specs">Windows 10 / 11 64-bit Installer</div>
-          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.exe"
+          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-Setup-1.1.1.exe"
             class="btn btn-primary">
             Download .exe
           </a>
@@ -773,7 +849,7 @@
           <div class="platform-icon-circle">🐧</div>
           <div class="platform-name">Linux</div>
           <div class="platform-specs">Universal .AppImage & Debian Package</div>
-          <a href="https://github.com/fireform-core/FireForm/releases/latest/download/FireForm-1.0.0.AppImage"
+          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-1.1.1.AppImage"
             class="btn btn-primary">
             Download .AppImage
           </a>
@@ -781,9 +857,9 @@
       </div>
 
       <div class="release-notes-banner">
-        Latest release: <strong>FireForm v1.0.0</strong> &nbsp;·&nbsp;
-        <a href="https://github.com/fireform-core/FireForm/releases" target="_blank" rel="noopener noreferrer">View
-          Changelog & Checksums →</a>
+        Latest release: <strong>FireForm v1.1.1</strong> &nbsp;·&nbsp;
+        <a href="https://github.com/fireform-core/fireform-frontend/releases/tag/v1.1.1" target="_blank" rel="noopener noreferrer">View
+          Release Notes &amp; Checksums →</a>
       </div>
     </div>
   </section>
@@ -870,7 +946,7 @@
 
       <div class="footer-bottom-bar">
         <div>
-          © 2026 FireForm Core. A recognized Digital Public Good.
+          FireForm — A recognized Digital Public Good. Open Source, MIT License.
         </div>
         <div class="footer-bottom-links">
           <a href="privacy.html" class="footer-nav-link">Privacy</a>
