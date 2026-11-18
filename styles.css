@@ -2234,3 +2234,435 @@ button {
     gap: 14px;
   }
 }
+
+/* ==========================================================================
+   CTA Banner Section (Navigates to dedicated download page)
+   ========================================================================== */
+
+.cta-banner-section {
+  padding: 64px 0 32px;
+  background: #ffffff;
+}
+
+.cta-banner-box {
+  background: linear-gradient(135deg, #090d16 0%, #1e293b 100%);
+  border-radius: var(--radius-xl);
+  padding: 56px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+  box-shadow: var(--shadow-xl);
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-box::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(249, 87, 56, 0.2) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cta-banner-content {
+  max-width: 620px;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.cta-subtitle {
+  font-size: 1.05rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+}
+
+.cta-banner-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+.cta-banner-actions .btn-primary {
+  background: #ffffff;
+  color: #0f172a;
+  border-color: #ffffff;
+}
+
+.cta-banner-actions .btn-primary:hover {
+  background: #f1f5f9;
+  color: #000000;
+}
+
+.cta-banner-actions .btn-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.cta-banner-actions .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+/* ==========================================================================
+   Creators & Team Section
+   ========================================================================== */
+
+.creators-section {
+  padding: 88px 0;
+  background: #fafbfc;
+  border-top: 1px solid var(--border-light);
+}
+
+.creators-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.creator-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.creator-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-hover);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.creator-avatar-wrap {
+  position: relative;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.creator-avatar {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f1f5f9;
+  box-shadow: var(--shadow-sm);
+}
+
+.creator-badge-role {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 8px;
+  border-radius: 9999px;
+  background: #fef2f2;
+  color: #dc2626;
+  border: 1px solid #fee2e2;
+  margin-top: -10px;
+  position: relative;
+  z-index: 2;
+}
+
+.creator-badge-role.badge-maintainer {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #dbeafe;
+}
+
+.creator-badge-role.badge-community {
+  background: #ecfdf5;
+  color: #059669;
+  border-color: #d1fae5;
+}
+
+.creator-name {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.creator-role {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--color-accent-flame);
+  margin-bottom: 14px;
+}
+
+.creator-bio {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+
+.creator-linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #0a66c2;
+  background: rgba(10, 102, 194, 0.08);
+  border: 1px solid rgba(10, 102, 194, 0.2);
+  padding: 6px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.creator-linkedin-link:hover {
+  background: #0a66c2;
+  color: #ffffff;
+  border-color: #0a66c2;
+}
+
+.creator-github-link {
+  color: #0f172a;
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+.creator-github-link:hover {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+
+/* Maintainer avatar stack */
+.maintainers-avatar-stack {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 76px;
+}
+
+.m-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  margin-left: -12px;
+  box-shadow: var(--shadow-xs);
+}
+
+.m-avatar:first-child {
+  margin-left: 0;
+  background: linear-gradient(135deg, #0284c7, #0369a1);
+}
+
+.m-avatar:nth-child(2) {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+}
+
+.maintainer-names-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: auto;
+}
+
+.maintainer-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #334155;
+  background: #f1f5f9;
+  border: 1px solid #e2e8f0;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.contributors-icon-box {
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: #f0fdf4;
+  border: 3px solid #dcfce7;
+  color: #059669;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   Dedicated Download Page Specific Styles
+   ========================================================================== */
+
+.download-page-section {
+  padding: 48px 0 64px;
+  background: #ffffff;
+}
+
+.download-details-section {
+  padding: 64px 0 96px;
+  background: #fafbfc;
+  border-top: 1px solid var(--border-light);
+}
+
+.download-card-featured {
+  border-color: #0f172a;
+  box-shadow: var(--shadow-md);
+  position: relative;
+}
+
+.platform-badge-pill {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #059669;
+  background: #ecfdf5;
+  border: 1px solid #d1fae5;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  margin-bottom: 12px;
+}
+
+.download-feature-list {
+  list-style: none;
+  width: 100%;
+  text-align: left;
+  margin: 18px 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.download-feature-list li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.download-subnote {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 10px;
+  font-family: var(--font-mono);
+}
+
+.specs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.spec-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 22px 18px;
+  box-shadow: var(--shadow-xs);
+}
+
+.spec-icon {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.spec-title {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.spec-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+
+.spec-desc {
+  font-size: 0.76rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+/* ==========================================================================
+   Responsive Rules for Creators & CTA
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .creators-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .specs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cta-banner-box {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 24px;
+  }
+
+  .cta-banner-content {
+    max-width: 100%;
+  }
+
+  .cta-banner-actions {
+    width: 100%;
+  }
+
+  .cta-banner-actions .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .creators-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-title {
+    font-size: 1.6rem;
+  }
+}

@@ -37,8 +37,9 @@
           <li><a href="#features" class="nav-link">Features</a></li>
           <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
           <li><a href="#agencies" class="nav-link">Agencies</a></li>
-          <li><a href="dpg.html" class="nav-link">DPG & SDGs <span class="badge-new">UN</span></a></li>
-          <li><a href="#download" class="nav-link">Downloads</a></li>
+          <li><a href="#creators" class="nav-link">Team</a></li>
+          <li><a href="dpg.html" class="nav-link">DPG &amp; SDGs <span class="badge-new">UN</span></a></li>
+          <li><a href="download.html" class="nav-link">Downloads</a></li>
         </ul>
 
         <!-- Right Action CTAs -->
@@ -47,7 +48,7 @@
             class="btn btn-outline btn-sm">
             <span>GitHub</span>
           </a>
-          <a href="#download" class="btn btn-primary btn-sm">
+          <a href="download.html" class="btn btn-primary btn-sm">
             <span>Download v1.1.1</span>
           </a>
           <button class="mobile-toggle" aria-label="Toggle navigation menu">
@@ -85,7 +86,7 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#download" class="btn btn-primary btn-lg">
+            <a href="download.html" class="btn btn-primary btn-lg">
               <span>Download Free</span>
             </a>
             <a href="dpg.html" class="btn btn-secondary btn-lg">
@@ -340,7 +341,7 @@
               <span>Preserves original audio timestamped to the incident log</span>
             </li>
           </ul>
-          <a href="#download" class="btn btn-primary">
+          <a href="download.html" class="btn btn-primary">
             <span>Try Desktop App Free</span>
           </a>
         </div>
@@ -580,7 +581,7 @@
             filing requirements.
           </p>
           <div style="display: flex; gap: 12px; margin-top: 24px;">
-            <a href="#download" class="btn btn-primary">Get Started Free</a>
+            <a href="download.html" class="btn btn-primary">Get Started Free</a>
             <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
               class="btn btn-secondary">View Source Code</a>
           </div>
@@ -658,7 +659,7 @@
           Designed specifically for fast-paced shift work. Clean, distraction-free, and hyper-responsive.
         </p>
         <div style="display: flex; justify-content: center; gap: 12px; margin-top: 20px;">
-          <a href="#download" class="btn btn-primary">Download FireForm</a>
+          <a href="download.html" class="btn btn-primary">Download FireForm</a>
           <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer"
             class="btn btn-secondary">Star on GitHub ⭐</a>
         </div>
@@ -782,57 +783,123 @@
     </div>
   </section>
 
-  <!-- Download FireForm Section -->
-  <section class="download-section-modern" id="download">
+  <!-- CTA Banner Section (Directs to Dedicated Download Page) -->
+  <section class="cta-banner-section">
+    <div class="container">
+      <div class="cta-banner-box">
+        <div class="cta-banner-content">
+          <span class="section-pill" style="background: rgba(249, 87, 56, 0.12); color: var(--color-accent-flame); margin-bottom: 12px;">Official Release v1.1.1</span>
+          <h2 class="cta-title">Ready to eliminate incident paperwork?</h2>
+          <p class="cta-subtitle">
+            Download FireForm for macOS, Windows, and Linux. 100% offline, private, and open-source.
+          </p>
+        </div>
+        <div class="cta-banner-actions">
+          <a href="download.html" class="btn btn-primary btn-lg">
+            <span>Download Desktop App →</span>
+          </a>
+          <a href="https://github.com/fireform-core/FireForm" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+            <span>View Source on GitHub</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Creators & Team Section -->
+  <section class="creators-section" id="creators">
     <div class="container">
       <div class="section-head">
-        <span class="section-pill">Official Release</span>
-        <h2 class="section-title">Download FireForm for your platform</h2>
+        <span class="section-pill">Project Creators &amp; Community</span>
+        <h2 class="section-title">The team behind FireForm</h2>
         <p class="section-subtitle">
-          Free and open-source. Runs locally on Apple Silicon, Intel, Windows, and Linux. No subscription or cloud
-          account required.
+          FireForm was born at the United Nations Reboot the Earth hackathon and is continuously developed by open-source engineers passionate about first responders.
         </p>
       </div>
 
-      <div class="download-cards-grid">
-        <!-- macOS -->
-        <div class="download-platform-card">
-          <div class="platform-icon-circle">🍎</div>
-          <div class="platform-name">macOS</div>
-          <div class="platform-specs">Universal DMG (Apple Silicon M-Series & Intel)</div>
-          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-1.1.1-arm64.dmg"
-            class="btn btn-primary">
-            Download .dmg
+      <div class="creators-grid">
+        <!-- 1. Marc Vergés -->
+        <div class="creator-card">
+          <div class="creator-avatar-wrap">
+            <img src="https://avatars.githubusercontent.com/u/64635335" alt="Marc Vergés" class="creator-avatar">
+            <span class="creator-badge-role">Co-Creator</span>
+          </div>
+          <h3 class="creator-name">Marc Vergés</h3>
+          <div class="creator-role">Co-Creator &amp; Full-Stack Architect</div>
+          <p class="creator-bio">
+            Co-founded FireForm at Reboot the Earth. Architected the local LLM pipeline, WebSocket streaming gateway, and cross-platform desktop runtime.
+          </p>
+          <a href="https://www.linkedin.com/in/marc-verg%C3%A9s/" target="_blank" rel="noopener noreferrer" class="creator-linkedin-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn Profile</span>
           </a>
         </div>
 
-        <!-- Windows -->
-        <div class="download-platform-card">
-          <div class="platform-icon-circle">🪟</div>
-          <div class="platform-name">Windows</div>
-          <div class="platform-specs">Windows 10 / 11 64-bit Installer</div>
-          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-Setup-1.1.1.exe"
-            class="btn btn-primary">
-            Download .exe
+        <!-- 2. Vincent Harkins -->
+        <div class="creator-card">
+          <div class="creator-avatar-wrap">
+            <img src="https://avatars.githubusercontent.com/u/105030530" alt="Vincent Harkins" class="creator-avatar">
+            <span class="creator-badge-role">Co-Creator</span>
+          </div>
+          <h3 class="creator-name">Vincent Harkins</h3>
+          <div class="creator-role">Co-Creator &amp; ML Systems Engineer</div>
+          <p class="creator-bio">
+            Co-founded FireForm at Reboot the Earth. Spearheaded AI model extraction benchmarks, field mapping logic, and emergency responder user research.
+          </p>
+          <a href="https://www.linkedin.com/in/vincent-harkins-060a4426b/" target="_blank" rel="noopener noreferrer" class="creator-linkedin-link">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+            </svg>
+            <span>LinkedIn Profile</span>
           </a>
         </div>
 
-        <!-- Linux -->
-        <div class="download-platform-card">
-          <div class="platform-icon-circle">🐧</div>
-          <div class="platform-name">Linux</div>
-          <div class="platform-specs">Universal .AppImage & Debian Package</div>
-          <a href="https://github.com/fireform-core/fireform-frontend/releases/download/v1.1.1/FireForm-1.1.1.AppImage"
-            class="btn btn-primary">
-            Download .AppImage
+        <!-- 3. Maintainers -->
+        <div class="creator-card">
+          <div class="creator-avatar-wrap">
+            <div class="maintainers-avatar-stack">
+              <span class="m-avatar" title="Chetan R">CR</span>
+              <span class="m-avatar" title="Abhishek Kumar">AK</span>
+              <span class="m-avatar" title="Ali Usman">AU</span>
+            </div>
+            <span class="creator-badge-role badge-maintainer">Maintainers</span>
+          </div>
+          <h3 class="creator-name">Maintainers</h3>
+          <div class="creator-role">Chetan R · Abhishek Kumar · Ali Usman</div>
+          <p class="creator-bio">
+            Driving active repository health, Electron desktop stability, CI/CD automated release pipelines, and frontend features across the FireForm ecosystem.
+          </p>
+          <div class="maintainer-names-list">
+            <span class="maintainer-tag">Chetan R</span>
+            <span class="maintainer-tag">Abhishek Kumar</span>
+            <span class="maintainer-tag">Ali Usman</span>
+          </div>
+        </div>
+
+        <!-- 4. Contributors -->
+        <div class="creator-card">
+          <div class="creator-avatar-wrap">
+            <div class="contributors-icon-box">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <span class="creator-badge-role badge-community">Community</span>
+          </div>
+          <h3 class="creator-name">Contributors</h3>
+          <div class="creator-role">Global Open Source &amp; GSoC Community</div>
+          <p class="creator-bio">
+            Mentored by Salesforce and supported by Google Summer of Code developers. Contributors worldwide submitting agency PDF templates, translations, and patches.
+          </p>
+          <a href="https://github.com/fireform-core/FireForm/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer" class="creator-linkedin-link creator-github-link">
+            <span>Contribute on GitHub →</span>
           </a>
         </div>
-      </div>
-
-      <div class="release-notes-banner">
-        Latest release: <strong>FireForm v1.1.1</strong> &nbsp;·&nbsp;
-        <a href="https://github.com/fireform-core/fireform-frontend/releases/tag/v1.1.1" target="_blank" rel="noopener noreferrer">View
-          Release Notes &amp; Checksums →</a>
       </div>
     </div>
   </section>
@@ -887,7 +954,7 @@
             <li><a href="#features" class="footer-nav-link">Core Features</a></li>
             <li><a href="#how-it-works" class="footer-nav-link">Voice Dictation</a></li>
             <li><a href="#agencies" class="footer-nav-link">Agency Autofill</a></li>
-            <li><a href="#download" class="footer-nav-link">Desktop App Releases</a></li>
+            <li><a href="download.html" class="footer-nav-link">Desktop App Releases</a></li>
           </ul>
         </div>
 
