@@ -620,48 +620,67 @@ button {
    ========================================================================== */
 
 .logo-cloud-section {
-  padding: 40px 0;
+  padding: 36px 0;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   background: #fafbfc;
   text-align: center;
+  overflow: hidden;
 }
 
 .logo-cloud-label {
-  font-size: 0.82rem;
+  font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   color: var(--text-muted);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
-.logo-cloud-grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
+/* Marquee wrapper — clips the scrolling track */
+.logo-marquee-track-wrapper {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
 }
 
-.logo-item {
-  height: 32px;
+/* The scrolling track — double-width, animates left by exactly 50% */
+.logo-marquee-track {
   display: flex;
   align-items: center;
-  opacity: 0.7;
+  gap: 56px;
+  width: max-content;
+  animation: logo-marquee 32s linear infinite;
+  padding: 0 28px;
+}
+
+.logo-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes logo-marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.logo-marquee-item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  opacity: 0.6;
   filter: grayscale(100%);
-  transition: all 0.25s ease;
+  transition: opacity 0.25s ease, filter 0.25s ease;
 }
 
-.logo-item:hover {
+.logo-marquee-item:hover {
   opacity: 1;
   filter: grayscale(0%);
-  transform: translateY(-1px);
 }
 
-.logo-item img {
-  height: 28px;
+.logo-marquee-item img {
+  display: block;
   width: auto;
+  object-fit: contain;
 }
 
 /* ==========================================================================
