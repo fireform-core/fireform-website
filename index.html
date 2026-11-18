@@ -111,123 +111,103 @@
           </div>
         </div>
 
-        <!-- Right: Realistic PDF form preview (like Instafill.ai) -->
+        <!-- Right: Real PDF document with X-Ray Field Detection Animation (Instafill.ai style) -->
         <div class="hero-split-right">
-          <div class="pdf-preview-wrapper">
-            <div class="pdf-preview-label">
-              NFIRS-1 Incident Report &nbsp;·&nbsp; Filled by FireForm in 8 sec
-              <span class="pdf-label-status">Auto-filled</span>
-            </div>
-            <div class="pdf-preview-doc">
-              <!-- Simulated realistic NFIRS form header -->
-              <div class="pdf-form-header">
-                <div class="pdf-form-title">NFIRS-1 BASIC MODULE — NATIONAL FIRE INCIDENT REPORTING SYSTEM</div>
-                <div class="pdf-form-agency">U.S. Fire Administration / Federal Emergency Management Agency</div>
+          <div class="pdf-real-viewport">
+            
+            <!-- Carousel Top Header (like Instafill.ai in photo) -->
+            <div class="pdf-carousel-header">
+              <div class="pdf-carousel-title" id="pdfCarouselTitle">
+                <span class="pdf-carousel-name">ICS 209 Incident Summary</span> &nbsp;·&nbsp;
+                <span class="pdf-carousel-time">Filled by FireForm in 8 sec</span>
               </div>
-
-              <div class="pdf-form-body">
-                <!-- Row 1 -->
-                <div class="pdf-row">
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">INCIDENT DATE</div>
-                    <div class="pdf-field-value filled">11/14/2024</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">STATE INCIDENT NO.</div>
-                    <div class="pdf-field-value filled">CA-2024-884</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">FDID</div>
-                    <div class="pdf-field-value filled">39-15014</div>
-                  </div>
+              <div class="pdf-carousel-controls">
+                <button class="pdf-carousel-btn" id="pdfPrevBtn" aria-label="Previous form">‹</button>
+                <div class="pdf-carousel-dots">
+                  <span class="pdf-dot active" data-slide="0"></span>
+                  <span class="pdf-dot" data-slide="1"></span>
                 </div>
-
-                <!-- Row 2 -->
-                <div class="pdf-row">
-                  <div class="pdf-field pdf-field-wide">
-                    <div class="pdf-field-label">LOCATION OF INCIDENT</div>
-                    <div class="pdf-field-value filled">742 Evergreen Terrace, Santa Cruz, CA 95062</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">INCIDENT TYPE</div>
-                    <div class="pdf-field-value filled">111 — Building Fire</div>
-                  </div>
-                </div>
-
-                <!-- Row 3 -->
-                <div class="pdf-row">
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">ALARM TIME</div>
-                    <div class="pdf-field-value filled">14:18 PST</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">ARRIVAL TIME</div>
-                    <div class="pdf-field-value filled">14:22 PST</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">CONTROLLED TIME</div>
-                    <div class="pdf-field-value filled">14:58 PST</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">CLEARED TIME</div>
-                    <div class="pdf-field-value filled">15:34 PST</div>
-                  </div>
-                </div>
-
-                <!-- Row 4 -->
-                <div class="pdf-row">
-                  <div class="pdf-field pdf-field-wide">
-                    <div class="pdf-field-label">APPARATUS / RESOURCES DEPLOYED</div>
-                    <div class="pdf-field-value filled">Engine 14 (Primary Attack), Water Tender 2, Medic 8</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">PERSONNEL</div>
-                    <div class="pdf-field-value filled">6</div>
-                  </div>
-                </div>
-
-                <!-- Row 5 -->
-                <div class="pdf-row">
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">CIVILIAN CASUALTIES</div>
-                    <div class="pdf-field-value filled">0</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">FF INJURIES</div>
-                    <div class="pdf-field-value filled">0</div>
-                  </div>
-                  <div class="pdf-field pdf-field-wide">
-                    <div class="pdf-field-label">PROPERTY USE</div>
-                    <div class="pdf-field-value filled">419 — 1 or 2 Family Dwelling</div>
-                  </div>
-                </div>
-
-                <!-- Row 6: Narrative -->
-                <div class="pdf-row">
-                  <div class="pdf-field pdf-field-full">
-                    <div class="pdf-field-label">INCIDENT NARRATIVE</div>
-                    <div class="pdf-field-value filled pdf-narrative">Engine 14 arrived on scene at 14:22 at 742 Evergreen Terrace. Confirmed single-family two-story structure fire with heavy smoke from rear bedroom. Two 1.75" attack lines deployed. Hydrant established at corner of Elm. Search completed — primary all-clear. Fire under control at 14:58. No civilian or firefighter injuries reported.</div>
-                  </div>
-                </div>
-
-                <!-- Signature row -->
-                <div class="pdf-row pdf-row-signature">
-                  <div class="pdf-field pdf-field-wide">
-                    <div class="pdf-field-label">OFFICER IN CHARGE</div>
-                    <div class="pdf-field-value filled">Capt. Sarah Chen · Station 14</div>
-                  </div>
-                  <div class="pdf-field">
-                    <div class="pdf-field-label">BADGE / ID</div>
-                    <div class="pdf-field-value filled">FF-4421</div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Bottom overlay badge -->
-              <div class="pdf-filled-badge">
-                All 24 fields auto-filled · 100% accuracy · On-device AI
+                <button class="pdf-carousel-btn" id="pdfNextBtn" aria-label="Next form">›</button>
               </div>
             </div>
+
+            <!-- Realistic Document Paper Sheet -->
+            <div class="pdf-document-sheet" id="pdfDocumentSheet">
+              <img id="pdfPageImg" src="assets/ics-209-filled-retina.png" alt="Official ICS 209 Incident Status Summary PDF auto-filled by FireForm" class="pdf-real-img">
+
+              <!-- Laser Scanline Sweeping Beam (X-Ray effect from fireform-frontend) -->
+              <div class="xray-scanline-beam"></div>
+
+              <!-- X-Ray Field Detection Bounding Boxes Overlay (Slide 0: ICS 209) -->
+              <div class="xray-field-overlay" id="xrayOverlaySlide0">
+                <div class="xray-box box-1" style="top: 6.8%; left: 19%; width: 28%; height: 2.8%;">
+                  <span class="xray-tag">Oak Ridge Fire</span>
+                </div>
+                <div class="xray-box box-2" style="top: 6.8%; left: 64%; width: 30%; height: 2.8%;">
+                  <span class="xray-tag">CA-SCU-008842</span>
+                </div>
+                <div class="xray-box box-3" style="top: 10.8%; left: 24%; width: 28%; height: 2.8%;">
+                  <span class="xray-tag">Commander M. Ramirez</span>
+                </div>
+                <div class="xray-box box-4" style="top: 10.8%; left: 76%; width: 18%; height: 4.8%;">
+                  <span class="xray-tag">Start: 14:18 PST</span>
+                </div>
+                <div class="xray-box box-5" style="top: 22.4%; left: 6.5%; width: 22%; height: 3.2%;">
+                  <span class="xray-tag">145 Acres</span>
+                </div>
+                <div class="xray-box box-6" style="top: 22.4%; left: 28.5%; width: 26%; height: 3.2%;">
+                  <span class="xray-tag">100% Contained</span>
+                </div>
+                <div class="xray-box box-7" style="top: 29.5%; left: 6.5%; width: 44%; height: 3.2%;">
+                  <span class="xray-tag">Prepared: Capt. S. Chen</span>
+                </div>
+                <div class="xray-box box-8" style="top: 35.5%; left: 6.5%; width: 44%; height: 3.2%;">
+                  <span class="xray-tag">Approved: Chief R. Miller</span>
+                </div>
+                <div class="xray-box box-9" style="top: 42.2%; left: 6.5%; width: 88%; height: 2.8%;">
+                  <span class="xray-tag">Santa Cruz, CA (State / County Mutual Aid)</span>
+                </div>
+                <div class="xray-box box-10" style="top: 55.6%; left: 6.5%; width: 46%; height: 2.8%;">
+                  <span class="xray-tag">Coords: 37°01'44"N 121°58'32"W</span>
+                </div>
+                <div class="xray-box box-11" style="top: 68.2%; left: 6.5%; width: 88%; height: 8.5%;">
+                  <span class="xray-tag">Narrative &amp; Apparatus Dispatched</span>
+                </div>
+              </div>
+
+              <!-- X-Ray Field Detection Bounding Boxes Overlay (Slide 1: ICS 201) -->
+              <div class="xray-field-overlay" id="xrayOverlaySlide1" style="display: none;">
+                <div class="xray-box box-1" style="top: 6.8%; left: 18%; width: 30%; height: 3%;">
+                  <span class="xray-tag">Evergreen Structure Fire</span>
+                </div>
+                <div class="xray-box box-2" style="top: 6.8%; left: 50%; width: 25%; height: 3%;">
+                  <span class="xray-tag">CA-2024-884</span>
+                </div>
+                <div class="xray-box box-3" style="top: 6.8%; left: 78%; width: 20%; height: 3%;">
+                  <span class="xray-tag">11/14/2026 14:18</span>
+                </div>
+                <div class="xray-box box-4" style="top: 19%; left: 7%; width: 86%; height: 20%;">
+                  <span class="xray-tag">Operational Grid Mapped</span>
+                </div>
+                <div class="xray-box box-5" style="top: 44.5%; left: 7%; width: 86%; height: 10%;">
+                  <span class="xray-tag">Situation &amp; Health Briefing</span>
+                </div>
+                <div class="xray-box box-6" style="top: 58%; left: 18%; width: 28%; height: 3%;">
+                  <span class="xray-tag">Capt. Sarah Chen</span>
+                </div>
+                <div class="xray-box box-7" style="top: 58%; left: 48%; width: 24%; height: 3%;">
+                  <span class="xray-tag">Engine 14 Primary</span>
+                </div>
+              </div>
+
+              <!-- HUD Detection Capsule (matching fireform-frontend DocumentViewer) -->
+              <div class="xray-hud-pill">
+                <span class="xray-pulse-dot"></span>
+                <span class="xray-hud-text">X-Ray Field Detection Active &nbsp;·&nbsp; <strong>24 fields mapped</strong></span>
+                <span class="xray-hud-badge">100% Offline AI</span>
+              </div>
+            </div>
+
           </div>
         </div>
 

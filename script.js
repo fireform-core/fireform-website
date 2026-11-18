@@ -80,4 +80,61 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // 4. Hero Section Real PDF Carousel & X-Ray Switcher
+  const pdfCarouselData = [
+    {
+      name: 'ICS 209 Wildfire Summary',
+      time: 'Filled by FireForm in 8 sec',
+      img: 'assets/ics-209-filled-retina.png',
+      alt: 'Official ICS 209 Incident Status Summary PDF auto-filled by FireForm'
+    },
+    {
+      name: 'ICS 201 Incident Briefing',
+      time: 'Filled by FireForm in 6 sec',
+      img: 'assets/ics-201-filled-retina.png',
+      alt: 'Official ICS 201 Incident Briefing PDF auto-filled by FireForm'
+    }
+  ];
+
+  let currentPdfSlide = 0;
+  const pdfCarouselTitle = document.getElementById('pdfCarouselTitle');
+  const pdfPageImg = document.getElementById('pdfPageImg');
+  const pdfPrevBtn = document.getElementById('pdfPrevBtn');
+  const pdfNextBtn = document.getElementById('pdfNextBtn');
+  const pdfDots = document.querySelectorAll('.pdf-dot');
+  const overlay0 = document.getElementById('xrayOverlaySlide0');
+  const overlay1 = document.getElementById('xrayOverlaySlide1');
+
+  function updatePdfSlide(index) {
+    currentPdfSlide = (index + pdfCarouselData.length) % pdfCarouselData.length;
+    const data = pdfCarouselData[currentPdfSlide];
+
+    if (pdfCarouselTitle) {
+      pdfCarouselTitle.innerHTML = `<span class="pdf-carousel-name">${data.name}</span> &nbsp;·&nbsp; <span class="pdf-carousel-time">${data.time}</span>`;
+    }
+    if (pdfPageImg) {
+      pdfPageImg.src = data.img;
+      pdfPageImg.alt = data.alt;
+    }
+    pdfDots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === currentPdfSlide);
+    });
+
+    if (overlay0 && overlay1) {
+      if (currentPdfSlide === 0) {
+        overlay0.style.display = 'block';
+        overlay1.style.display = 'none';
+      } else {
+        overlay0.style.display = 'none';
+        overlay1.style.display = 'block';
+      }
+    }
+  }
+
+  pdfPrevBtn?.addEventListener('click', () => updatePdfSlide(currentPdfSlide - 1));
+  pdfNextBtn?.addEventListener('click', () => updatePdfSlide(currentPdfSlide + 1));
+  pdfDots.forEach((dot, idx) => {
+    dot.addEventListener('click', () => updatePdfSlide(idx));
+  });
 });
